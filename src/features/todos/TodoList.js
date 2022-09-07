@@ -13,8 +13,6 @@ const TodoList = () => {
     const [updateTodo] = useUpdateTodoMutation()
     const [deleteTodo] = useDeleteTodoMutation()
 
-    console.log({ data: todos, isLoading, isSuccess, isError, error })
-
     const handleSubmit = (e) => {
         e.preventDefault();
         addTodo({ userId: 1, title: newTodo, completed: false })
