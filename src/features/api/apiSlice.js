@@ -13,6 +13,13 @@ export const apiSlice = createApi({
                 method: 'POST',
                 body: todo
             })
+        }),
+        updateTodo: builder.mutation({
+            query: (todo) => ({
+                url: `/todos${todo.id}`,
+                method: 'PATCH',
+                body: todo
+            })
         })
     })
 })
